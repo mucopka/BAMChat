@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:;base64,=">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="script.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link id="theme_css" rel="stylesheet" href="style.css" type="text/css"/>
+    <title>pm_chatapp</title>
+</head>
+    <body class="noto-sans-body">
+        <div class="container_flex_column" style="height: 100%;">
+            <button class="settings-button light-grey-universal" id="settings-button">Settings</button>
+            <div class="container-flex" id="app-part">
+                <div class="grey-universal" id = "chat-controls" >
+                    <div id="new-chat-button-container">
+                        <button class="chat-button light-grey-universal" id="new-chat-button" type="button" value="new-chat">New chat</button>
+                    </div>
+                    <div class="grey-universal" id="chat-button-container">
+                    </div>
+                </div>
+                <div class= "chat-list grey-universal">
+                    <div id="app-container">
+                        <div id="message-container"></div>
+                        <div class="container-flex" id="chat-control-panel">
+                            <input type="text" id="info-input" class="light-grey-universal" placeholder="Write your message">
+                            <div id="controls">
+                                <button class="button light-grey-universal" id="upload-button" >file</button>
+                                <button class="button light-grey-universal" id="enter-button"> -> </button>
+                            </div>
+                        </div>
+                        <div id="upload-form-window">
+                            <form action= "http://localhost:3030/api/upload" method="post" id="upload-form">
+                                <input type="hidden" id="upload-form-input" name="file-input" accept=".txt,.pdf,.js,.ts,.c,.cpp,.go,.md,.json,.ejs,.html,">
+                                <input type="submit" name="file-upload-submit" id="file-upload-submit-button">
+                            </form>
+                        </div>
+                        <div id="settings-window">
+                            <button id="theme-button" class="settings-button light-grey-universal inner-settings-button">Theme</button>
+                            <button id="locale-button" class="settings-button light-grey-universal inner-settings-button">Language</button>
+                            <button id="info-button" class="settings-button light-grey-universal inner-settings-button">Info</button>
+                            <button id="pull-button" class="settings-button light-grey-universal inner-settings-button">Pull Model</button>
+                            <button id="delete-button" class="settings-button light-grey-universal inner-settings-button">Delete Model</button>
+                            <button id="logout-button" class="settings-button light-grey-universal inner-settings-button">End Session</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

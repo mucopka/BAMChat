@@ -1,0 +1,31 @@
+{
+  "name": "BAMCHAT",
+  "version": "0.0.1",
+  "description": "Basic and modifiable web chat for interaction with LLMs run via Ollama",
+  "main": "server.js",
+  "scripts": {
+    "initDB": "node ./src/database.js",
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
+  "author": "Denis Rublev",
+  "license": "MIT",
+  "url": "",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-fileupload": "^1.5.1",
+    "express-session": "^1.18.1",
+    "method-override": "^3.0.0",
+    "ollama": "^0.5.15",
+    "remarkable": "^2.0.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "sqlite3": "^5.1.7",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

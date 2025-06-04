@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <title>Login</title>
+</head>
+<body>
+    <div id="form-container">
+        <form class="grey-universal" action="/api/submit-login" method="post">
+            <div style="margin-bottom: 10px;">
+                <label for="login">Login:</label>
+            </div> <br>
+            <div style="margin-bottom: 20px;">
+                <input class="light-grey-universal" style="margin: 0;" type="login" id="login" name="login" required>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label 100; for="password">Password:</label>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <input class="light-grey-universal" style="margin: 0;" type="password" id="password" name="password" required>
+            </div>
+            <input style="margin: 0px" type="submit" value="Log in" class="login-button light-grey-universal"></input>
+            <div style="text-align: center; margin-top: 15px;">
+                <a href="http://localhost:3030/register">Register</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
